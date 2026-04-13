@@ -1,11 +1,12 @@
 import pandas as pd
 import openpyxl
-import os # ta paczka daje dostep do struktury katalogow
+import os
+from config import Config # ta paczka daje dostep do struktury katalogow
 
 # ZAPISYWANIE DANYCH
 def save_to_excel(data):
 
-    PATH = "weather_data.xlsx"
+    PATH = Config.EXCEL_PATH
 
     try:
         new_df = pd.DataFrame(data)
